@@ -20,6 +20,8 @@ Copy `.env.template` to `.env` and fill in the variables.
 ### Amazon SES
 Ensure you have a verified identity, have enabled rules for recieving emails, and set the `EMAIL_FROM` env var to your from email.
 
+> Note: the repo is currently missing the aws lambda code
+
 ## Running locally
 1. Clone the repository
 2. Run `npm i` to install all dependencies (you may need to include flags like `--peer-legacy-deps`)
