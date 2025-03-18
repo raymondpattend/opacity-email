@@ -24,7 +24,7 @@ Copy `.env.template` to `.env` and fill in the variables.
 ### Turso + Drizzle
 Turso is basically free and Drizzle is superior to prisma.
 
-- Create a turso.dev db, copy and paste token and url to `.env`.
+- Create a turso.tech db, copy and paste token and url to `.env`.
 - Run `npx drizzle-kit generate` and `npx drizzle-kit migrate` to save database
 
 ## Running locally
