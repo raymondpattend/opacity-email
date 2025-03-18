@@ -17,10 +17,9 @@ This was made in 6 total dev hours on a Saturday evening, and is aimed to be a f
 ### Environment Variables
 Copy `.env.template` to `.env` and fill in the variables.
 
-### Amazon SES
-Ensure you have a verified identity, have enabled rules for recieving emails, and set the `EMAIL_FROM` env var to your from email.
+### Amazon Lambda && SES
 
-> Note: the repo is currently missing the aws lambda code
+[Follow these instructions](https://github.com/Rayrnond/opacity-email/blob/main/lambda/README.md)
 
 ## Running locally
 1. Clone the repository
