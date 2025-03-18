@@ -1,1 +1,0 @@
-ALTER TABLE `email_logs` ADD `declined` integer DEFAULT 0;

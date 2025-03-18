@@ -1,7 +1,7 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "8988ad4f-fc8f-4c0c-bc50-16fbf4405fe7",
+  "id": "640f5ce7-0e15-44e8-9e50-2f355d9974b6",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "email_addresses": {
@@ -50,6 +50,14 @@
           "notNull": false,
           "autoincrement": false,
           "default": 0
+        },
+        "recipient": {
+          "name": "recipient",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "''"
         }
       },
       "indexes": {
@@ -90,18 +98,26 @@
           "notNull": true,
           "autoincrement": false
         },
-        "event": {
-          "name": "event",
+        "sender": {
+          "name": "sender",
           "type": "text",
           "primaryKey": false,
           "notNull": true,
           "autoincrement": false
         },
-        "metadata": {
-          "name": "metadata",
+        "sender_email": {
+          "name": "sender_email",
           "type": "text",
           "primaryKey": false,
-          "notNull": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "''"
+        },
+        "subject": {
+          "name": "subject",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
           "autoincrement": false
         },
         "created_at": {
@@ -111,6 +127,14 @@
           "notNull": false,
           "autoincrement": false,
           "default": "(CURRENT_TIMESTAMP)"
+        },
+        "declined": {
+          "name": "declined",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": 0
         }
       },
       "indexes": {},

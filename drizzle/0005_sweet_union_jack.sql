@@ -1,1 +1,0 @@
-ALTER TABLE `email_addresses` ADD `recipient` text DEFAULT '' NOT NULL;

@@ -5,43 +5,8 @@
     {
       "idx": 0,
       "version": "6",
-      "when": 1742013092744,
-      "tag": "0000_volatile_wrecker",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "6",
-      "when": 1742093257455,
-      "tag": "0001_brief_joystick",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "6",
-      "when": 1742093313234,
-      "tag": "0002_smooth_mephistopheles",
-      "breakpoints": true
-    },
-    {
-      "idx": 3,
-      "version": "6",
-      "when": 1742093325472,
-      "tag": "0003_unusual_masked_marvel",
-      "breakpoints": true
-    },
-    {
-      "idx": 4,
-      "version": "6",
-      "when": 1742097839170,
-      "tag": "0004_moaning_toad",
-      "breakpoints": true
-    },
-    {
-      "idx": 5,
-      "version": "6",
-      "when": 1742099651066,
-      "tag": "0005_sweet_union_jack",
+      "when": 1742301898853,
+      "tag": "0000_curvy_hawkeye",
       "breakpoints": true
     }
   ]
