@@ -44,7 +44,7 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
       >
-        <div className="flex justify-center items-center max-w-screen overflow-hidden h-screen bg-[url('/image.png')] bg-cover bg-center lg:rounded-none rounded-xl">
+        <div className="flex justify-center items-center max-w-screen overflow-hidden h-screen bg-[url('/image.webp')] bg-cover bg-center lg:rounded-none rounded-xl">
           <div className="relative gap-y-5 bg-white/10 overflow-x-clip flex flex-col w-full xl:max-w-[60%] lg:max-w-[80%] max-w-full h-full lg:h-[50%] backdrop-blur-md border border-white/20 rounded-xl p-3 shadow-lg">
             {children}
           </div>
