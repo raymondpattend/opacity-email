@@ -1,0 +1,16 @@
+input::placeholder {
+  color: gray;
+  opacity: 1; /* Override default opacity */
+}
+
+input::-webkit-input-placeholder {
+  color: gray;
+}
+
+input:-ms-input-placeholder {
+  color: gray;
+}
+
+input::-ms-input-placeholder {
+  color: gray;
+}

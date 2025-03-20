@@ -1,5 +1,8 @@
 'use client'
 
+// needed to fix some weird bug with the placeholder color
+import "./modul.css";
+
 import { useState } from "react";
 import TurnstileBlock from "./turnstile";
 import { useRouter } from "next/navigation";
