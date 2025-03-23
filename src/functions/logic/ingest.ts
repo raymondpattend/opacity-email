@@ -28,7 +28,7 @@ export async function logEmail(mail: ParsedMail) {
         throw new Error("Email address not found or is disabled by recipient");
     }
     
-    await drizzleDB.insert(emailLogs).values({
+    const newLog = await drizzleDB.insert(emailLogs).values({
         id: uuidv4(),
         emailAddressId: emailAddress.id,
         sender,
@@ -36,7 +36,7 @@ export async function logEmail(mail: ParsedMail) {
         senderEmail,
         createdAt: new Date().toISOString(),
         declined: emailAddress.disabled == 1 ? 1 : 0,
-    });
+    }).returning();
 
     // disable email address if it is disabled by recipient
     if (emailAddress.disabled == 1) {
@@ -50,5 +50,6 @@ export async function logEmail(mail: ParsedMail) {
         createdAt: new Date().toISOString(),
         sendTo: emailAddress.recipient,
         login: emailAddress.loginToken,
+        loggedID: newLog[0].id,
     }
 }

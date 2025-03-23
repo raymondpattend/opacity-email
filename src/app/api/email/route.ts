@@ -13,9 +13,9 @@ export async function POST(request: NextRequest) {
 
     const { email, turnstileToken } = await request.json();
 
-    if (process.env.INTERNAL_SHOW_ERROR === 'true') {
-        return NextResponse.json({ error: 'We\'re still waiting for Amazon to approve our AWS account, please try again later' }, { status: 400 });
-    }
+    // if (process.env.INTERNAL_SHOW_ERROR === 'true') {
+    //     return NextResponse.json({ error: 'We\'re still waiting for Amazon to approve our AWS account, please try again later' }, { status: 400 });
+    // }
 
     if (!email || !turnstileToken || !emailRegex.test(email)) {
         return NextResponse.json({ error: 'Fields missing that are required, please refresh the page and try again.' }, { status: 400 });

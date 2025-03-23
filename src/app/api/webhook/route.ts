@@ -32,10 +32,9 @@ export async function POST(request: NextRequest) {
         if (text) text.Data += `\n\n\n\nForwarded by opacity.email. manage this relay: https://opacity.email/email/${logged.login}`;
         if (html) html.Data += `<br><br><hr><p style="color: #666; font-size: 0.9em; display: flex; justify-content: space-between; width: 100%;"><span>forwarded by opacity.email</span><a href="https://opacity.email/email/${logged.login}" style="color: #666; text-decoration: underline;">manage this relay</a></p>`;
 
-        console.log(logged);
         const command = new SendEmailCommand({
             Source: `${logged.sender} [via opacity.email] <${process.env.EMAIL_FROM}>`,
-            
+            ReplyToAddresses: [`${logged.sender} <${logged.loggedID}+${process.env.EMAIL_FROM}>`], // e.g. 1234567890+test@opacity.email , allows replying to the original sender
             Destination: {
                 ToAddresses: [logged.sendTo],
             },

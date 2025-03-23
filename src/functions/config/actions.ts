@@ -9,5 +9,6 @@ export async function isEnabled() {
         return true;
     }
 
+    return true;
     return await get("status") === "enabled";
 }
